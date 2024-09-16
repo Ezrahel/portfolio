@@ -34,7 +34,7 @@ app.post('/send_email', async (req, res) => {
   const headers = {
     "Content-Type": "application/json",
     "accept": "application/json",
-    "api-key": process.env.SENDINBLUE_API_KEY
+    // "api-key": process.env.SENDINBLUE_API_KEY
   };
 
   const emailData = {
