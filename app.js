@@ -29,12 +29,12 @@ app.post('/send_email', async (req, res) => {
     return res.status(400).send('All fields are required.');
   }
 
-  const url = "https://api.sendinblue.com/v3/smtp/email";
+  const url = process.env.SENDINBLUE_API_URL;
 
   const headers = {
     "Content-Type": "application/json",
     "accept": "application/json",
-    // "api-key": process.env.SENDINBLUE_API_KEY
+    "api-key": process.env.SENDINBLUE_API_KEY
   };
 
   const emailData = {
